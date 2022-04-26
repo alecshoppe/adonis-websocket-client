@@ -3,7 +3,7 @@ const basePlugins = require('./rollup.plugins.js')
 
 const pluginBabel = require('rollup-plugin-babel')({
   ignore: [/node_modules\/(!emittery).*/],
-  plugins: ['@babel/plugin-transform-regenerator', '@babel/transform-regenerator'],
+  plugins: ['@babel/transform-regenerator'],
   presets: [
     [
       '@babel/preset-env',
