@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
 */
 
+import wsp from '@adonisjs/websocket-packet'
 import Emitter from 'emittery'
 import { stringify } from 'query-string'
-import wsp from '@adonisjs/websocket-packet'
 import debug from '../Debug/index.js'
-import Socket from '../Socket/index.js'
 import JsonEncoder from '../JsonEncoder/index.js'
+import Socket from '../Socket/index.js'
 
 /**
  * Returns the ws protocol based upon HTTP or HTTPS
@@ -22,7 +22,7 @@ import JsonEncoder from '../JsonEncoder/index.js'
  * @returns {String}
  *
  */
-const wsProtocol = (typeof window !== 'undefined' && window.location.protocol === 'https:') ? 'wss' : 'ws'
+const wsProtocol ='wss'
 
 /**
  * Connection class is used to make a TCP/Socket connection
